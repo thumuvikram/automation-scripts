@@ -6,7 +6,7 @@
 
 clear
 
-echo " PROVIDE ME PATH LOCATION TO INSTALL ON SYSTEM:"
+echo " PROVIDE ME PATH LOCATION  AS /opt/temp TO INSTALL ON SYSTEM:"
 read path
 
 echo "PROVIDE URL LINK TO DOWNLOAD APACHE-MAVEN :"
@@ -38,9 +38,10 @@ echo
 echo "************************************************************"
 echo " WE ARE ABOUT TO CONFIGURE THE ENVIRONMENT VARIABLES FOR MAVEN"
 echo `pwd`
-var_maven=`ls a*m???n*`
+var_maven=`ls`
 echo $var_maven
 mv $var_maven maven
+mv maven /opt/
 touch /etc/profile.d/maven.sh
 echo "MAVEN SUCCESSFULLY INSTALLED "
 echo "export M2_HOME=/opt/maven" > /root/maven.conf
