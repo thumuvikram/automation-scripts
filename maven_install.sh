@@ -18,7 +18,7 @@ read filename
 
 clear
 echo "WE ARE ABOUT TO DOWNLOAD MAVEN"
-rm -rf /opt/m*
+rm -rf /opt/m*n
 mkdir $path
 cd $path
 sleep 3
@@ -38,7 +38,7 @@ echo
 echo "************************************************************"
 echo " WE ARE ABOUT TO CONFIGURE THE ENVIRONMENT VARIABLES FOR MAVEN"
 echo `pwd`
-var_maven=`ls`
+var_maven=`ls a*m???n*`
 echo $var_maven
 mv $var_maven maven
 touch /etc/profile.d/maven.sh
