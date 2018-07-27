@@ -37,10 +37,10 @@ echo
 echo
 echo "************************************************************"
 echo " WE ARE ABOUT TO CONFIGURE THE ENVIRONMENT VARIABLES FOR MAVEN"
-
+echo `pwd`
 var_maven=`ls`
 echo $var_maven
-mv /opt/$var_maven /opt/maven
+mv $var_maven maven
 touch /etc/profile.d/maven.sh
 echo "MAVEN SUCCESSFULLY INSTALLED "
 echo "export M2_HOME=/opt/maven" >> /root/maven.conf
