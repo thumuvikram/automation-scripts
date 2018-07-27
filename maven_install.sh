@@ -40,10 +40,14 @@ echo " WE ARE ABOUT TO CONFIGURE THE ENVIRONMENT VARIABLES FOR MAVEN"
 
 var_maven=`ls`
 echo $var_maven
-echo `mv /opt/$var_maven /opt/maven`
+mv /opt/$var_maven /opt/maven
 touch /etc/profile.d/maven.sh
-echo `source /etc/profile.d/maven.sh`
 echo "MAVEN SUCCESSFULLY INSTALLED "
+echo "export M2_HOME=/opt/maven" >> /root/maven.conf
+echo "export PATH=${M2_HOME}/bin:${PATH}" >> /root/maven.conf
+echo "CONFIGURATION IS READY AT LOCATION : /root/maven.conf "
+echo " /root/maven.conf file contains environment information, copy environment variables into /etc/profile.d/maven.sh"
+echo " Next, Execute command # source /etc/profile.d/maven.sh after above step if completed" 
 
 
 
