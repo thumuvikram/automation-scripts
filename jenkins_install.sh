@@ -17,4 +17,4 @@ firewall-cmd --permanent --service=jenkins --add-port=8080/tcp
 firewall-cmd --permanent --add-service=jenkins
 firewall-cmd --zone=public --add-service=http --permanent
 firewall-cmd --reload
-
+echo " JENKINS SERVER IS ACCESSIBLE LINK: `hostname -I`:8080"
