@@ -7,10 +7,10 @@
 #    Description : This script will setup static IP for Chef Server
 # ------------------------------------------------------------------
 
-        echo "Enter below values of Chef-Server as per Plan"               
+        echo "Enter below values of Chef-Workstation as per Plan"               
         read -p 'Enter New Hostname for Work Station: ' chef_workstation_hostname
-        read -p 'Enter Gateway IP Address: ' gateway
         read -p 'Enter a Static IP to configure for Workstation: ' chef_workstation_staticip
+        read -p 'Enter Gateway IP Address: ' gateway
         echo "we are about setup static ip for Workstation ....."
         sleep 10
         hostnamectl set-hostname $chef_workstation_hostname
