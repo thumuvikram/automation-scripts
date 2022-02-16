@@ -18,7 +18,7 @@
         echo "$chef_client_staticip $chef_client_hostname" >> /etc/hosts
         rm -f /etc/sysconfig/network-scripts/ifcfg-enp0s3.bak
         cp /etc/sysconfig/network-scripts/ifcfg-enp0s3 /etc/sysconfig/network-scripts/ifcfg-enp0s3.bak
-        echo "IPADDR=$chef_client_staticip \nDNS1=$gateway \nDNS2=8.8.8.8 \nGATEWAY=$gateway" >> /etc/sysconfig/network-scripts/ifcfg-enp0s3
+        echo -e "IPADDR=$chef_client_staticip \nDNS1=$gateway \nDNS2=8.8.8.8 \nGATEWAY=$gateway" >> /etc/sysconfig/network-scripts/ifcfg-enp0s3
         sed -i 's/dhcp/static/' /etc/sysconfig/network-scripts/ifcfg-enp0s3
         sed -i 's/ONBOOT=no/ONBOOT=yes/' /etc/sysconfig/network-scripts/ifcfg-enp0s3
         echo "We have successfully configured Chef Client on static IP"
