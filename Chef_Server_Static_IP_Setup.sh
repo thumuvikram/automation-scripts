@@ -3,6 +3,7 @@
 # ------------------------------------------------------------------
 #    Title : Script to Setup Static IP
 #    Author : thumuvikram@gmail.com
+#    Script version : 1.0
 #    Description : This script will setup static IP for Chef Server
 # ------------------------------------------------------------------
 
