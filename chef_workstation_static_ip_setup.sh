@@ -23,6 +23,6 @@
         sed -i 's/ONBOOT=no/ONBOOT=yes/' /etc/sysconfig/network-scripts/ifcfg-enp0s3
         echo "We have successfully configured Chef Workstation on static IP"
         sleep 3
-        echo " Chef Workstation will reboot to impact changes and reconnect using new static IP"
+        echo "Chef Workstation will reboot to impact changes and reconnect using new static IP"
         sleep 3
         shutdown -r
