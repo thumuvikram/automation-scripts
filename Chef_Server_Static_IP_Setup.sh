@@ -7,7 +7,7 @@
 #    Description : This script will setup static IP for Chef Server
 # ------------------------------------------------------------------
 
-        Echo "Enter below values of Chef-Server as per Plan"
+        echo "Enter below values of Chef-Server as per Plan"
         read -p 'Enter Hostname for Chef Server:' chef_server_hostname
         read -p 'Enter a Static IP to configure for chef Server:' chef_server_staticip
         read -p 'Enter Gateway IP Address:' gateway
