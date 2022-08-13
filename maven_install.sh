@@ -18,7 +18,7 @@ read filename
 
 clear
 echo "WE ARE ABOUT TO DOWNLOAD MAVEN"
-rm -rf /opt/m*n
+sudo rm -rf /opt/m*n
 mkdir $path
 cd $path
 sleep 3
@@ -40,15 +40,13 @@ echo " WE ARE ABOUT TO CONFIGURE THE ENVIRONMENT VARIABLES FOR MAVEN"
 echo `pwd`
 var_maven=`ls`
 echo $var_maven
-mv $var_maven maven
-mv maven /opt/
-touch /etc/profile.d/maven.sh
+sudo mv $var_maven maven
+sudo mv maven /opt/
+sudo rm -rf /etc/profile.d/maven.sh
+sudo touch /etc/profile.d/maven.sh
 echo "MAVEN SUCCESSFULLY INSTALLED "
-echo "export M2_HOME=/opt/maven" > /root/maven.conf
-echo "export PATH=${M2_HOME}/bin:${PATH}" >> /root/maven.conf
-echo "CONFIGURATION IS READY AT LOCATION : /root/maven.conf "
-echo " /root/maven.conf file contains environment information, copy environment variables into /etc/profile.d/maven.sh"
-echo " Next, Execute command # source /etc/profile.d/maven.sh after above step if completed" 
-
-
-
+sudo echo "export M2_HOME=/opt/maven" > /opt/maven.conf
+sudo echo "export PATH=${M2_HOME}/bin:${PATH}" >> /opt/maven.conf
+echo "CONFIGURATION IS READY AT LOCATION : /etc/profile.d/maven.sh "
+echo " /opt/maven.conf file contains environment information, copy environment variables into /etc/profile.d/maven.sh"
+echo " after copy, logout and login back into system to verify maven configurations.." 
